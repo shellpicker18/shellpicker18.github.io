@@ -55,15 +55,19 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://shellpicker18.github.io/tags/index.html">
+  <meta name="description" content="模板">
+<meta name="keywords" content="模板,线性代数,高斯消元">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高斯消元">
+<meta property="og:url" content="http://shellpicker18.github.io/2019/10/12/高斯消元/index.html">
 <meta property="og:site_name" content="shellpicker的博客">
+<meta property="og:description" content="模板">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-12T09:00:23.026Z">
+<meta property="og:updated_time" content="2019-10-12T13:54:25.351Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-  <link rel="canonical" href="http://shellpicker18.github.io/tags/">
+<meta name="twitter:title" content="高斯消元">
+<meta name="twitter:description" content="模板">
+  <link rel="canonical" href="http://shellpicker18.github.io/2019/10/12/高斯消元/">
 
 
 <script id="page-configurations">
@@ -71,16 +75,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
-    isPage: true,
+    isPost: true,
+    isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>
-      tags | shellpicker的博客
-    
-  </title>
+  <title>高斯消元 | shellpicker的博客</title>
   
 
 
@@ -258,69 +259,144 @@
         <div class="content-wrap">
             
 
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-  
-
           <div class="content">
             
 
   <div class="posts-expand">
-    
-    
-    
-    <div class="post-block" lang="zh-CN">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://shellpicker18.github.io/2019/10/12/高斯消元/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="shellpicker">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="shellpicker的博客">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            高斯消元
+            
 
-<h1 class="post-title" itemprop="name headline">tags
-  
+          
+        </h1>
 
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
-<div class="post-meta">
-  
+              
+                
+              
 
-</div>
+              <time title="创建时间：2019-10-12 21:21:13 / 修改时间：21:54:25" itemprop="dateCreated datePublished" datetime="2019-10-12T21:21:13+08:00">2019-10-12</time>
+            </span>
+          
+            
 
-</header>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/模板/" itemprop="url" rel="index">
+                    <span itemprop="name">模板</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+        <p>模板</p>
+<a id="more"></a>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">matrix</span> &#123;</span></span><br><span class="line">  <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">double</span>&gt;&gt; mat;</span><br><span class="line">  <span class="keyword">int</span> n, m;</span><br><span class="line">  matrix(<span class="keyword">int</span> n, <span class="keyword">int</span> m) : n(n), m(m) &#123;</span><br><span class="line">    mat.resize(n + <span class="number">1</span>, <span class="built_in">vector</span>&lt;<span class="keyword">double</span>&gt;(m + <span class="number">1</span>, <span class="number">0</span>));</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">vector</span>&lt;<span class="keyword">double</span>&gt; &amp;<span class="keyword">operator</span>[](<span class="keyword">int</span> x) &#123;</span><br><span class="line">    <span class="keyword">return</span> mat[x];</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">gauss</span><span class="params">(matrix &amp;a, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">    <span class="keyword">int</span> p = i;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">fabs</span>(a[p][i]) &lt; <span class="built_in">fabs</span>(a[j][i])) &#123;</span><br><span class="line">        p = j;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (p != i) &#123;</span><br><span class="line">      swap(a[p], a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">fabs</span>(a[p][i]) &lt; eps) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">      <span class="keyword">double</span> factor = a[j][i] / a[i][i];</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> k = i; k &lt;= n + <span class="number">1</span>; k++) &#123;</span><br><span class="line">        a[j][k] -= factor * a[i][k];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = n; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">      a[i][n + <span class="number">1</span>] -= a[j][n + <span class="number">1</span>] * a[i][j];</span><br><span class="line">    &#125;</span><br><span class="line">    a[i][n + <span class="number">1</span>] /= a[i][i];</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+        
       
-      
-      <div class="post-body">
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-              目前共计 10 个标签
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/模板/" rel="tag"># 模板</a>
+            
+              <a href="/tags/线性代数/" rel="tag"># 线性代数</a>
+            
+              <a href="/tags/高斯消元/" rel="tag"># 高斯消元</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/10/12/主席树/" rel="next" title="主席树">
+                  <i class="fa fa-chevron-left"></i> 主席树
+                </a>
+              
             </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/trie/" style="font-size: 12px; color: #ccc">trie</a> <a href="/tags/主席树/" style="font-size: 12px; color: #ccc">主席树</a> <a href="/tags/动态树/" style="font-size: 12px; color: #ccc">动态树</a> <a href="/tags/博客简介/" style="font-size: 12px; color: #ccc">博客简介</a> <a href="/tags/可持久化数据结构/" style="font-size: 18px; color: #8e8e8e">可持久化数据结构</a> <a href="/tags/多项式/" style="font-size: 12px; color: #ccc">多项式</a> <a href="/tags/数据结构/" style="font-size: 24px; color: #4f4f4f">数据结构</a> <a href="/tags/模板/" style="font-size: 30px; color: #111">模板</a> <a href="/tags/线性代数/" style="font-size: 18px; color: #8e8e8e">线性代数</a> <a href="/tags/高斯消元/" style="font-size: 12px; color: #ccc">高斯消元</a>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/10/12/矩阵求逆/" rel="prev" title="矩阵求逆">
+                  矩阵求逆 <i class="fa fa-chevron-right"></i>
+                </a>
+              
             </div>
           </div>
         
-      </div>
-      
-      
-      
-    </div>
+      </footer>
     
+  </article>
+  
+  
+  
 
-    
-    
-    
   </div>
 
 
