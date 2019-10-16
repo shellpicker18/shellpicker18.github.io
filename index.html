@@ -31,7 +31,7 @@
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
     copycode: {"enable":true,"show_result":true,"style":null},
     back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
-    bookmark: {"enable":true,"color":"#222","save":"manual"},
+    bookmark: {"enable":true,"save":"auto"},
     fancybox: false,
     mediumzoom: false,
     lazyload: false,
@@ -262,6 +262,122 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://shellpicker18.github.io/2019/10/15/后缀自动机总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="shellpicker">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="shellpicker的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2019/10/15/后缀自动机总结/" class="post-title-link" itemprop="url">后缀自动机总结</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-15 10:59:43" itemprop="dateCreated datePublished" datetime="2019-10-15T10:59:43+08:00">2019-10-15</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-16 13:50:36" itemprop="dateModified" datetime="2019-10-16T13:50:36+08:00">2019-10-16</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/总结/" itemprop="url" rel="index">
+                    <span itemprop="name">总结</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/总结/后缀自动机/" itemprop="url" rel="index">
+                    <span itemprop="name">后缀自动机</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="文本串中本质不同的子串的个数"><a href="#文本串中本质不同的子串的个数" class="headerlink" title="文本串中本质不同的子串的个数"></a>文本串中本质不同的子串的个数</h2><p>后缀自动机是一个有向无环图。</p><p>串 $s$ 是串 $t$ 的子串，当且仅当 $t$ 的后缀自动机上存在 $s$ 对应的状态。</p><p>因此，$t$ 的后缀自动机上不同的路径数就是本质不同的子串的数量。</p><p>考虑 $dp$，令 $f[i]$ 表示从状态 $i$ 出发，共有多少种本质不同的子串，转移如下：</p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2019/10/15/后缀自动机总结/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://shellpicker18.github.io/2019/10/14/后缀自动机/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -328,7 +444,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>模板</p>
+          <p>模板<br>
           <!--noindex-->
           
             <div class="post-button">
@@ -425,7 +541,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>模板</p>
+          <p>模板<br>
           <!--noindex-->
           
             <div class="post-button">
@@ -522,7 +638,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>模板</p>
+          <p>模板<br>
           <!--noindex-->
           
             <div class="post-button">
@@ -619,7 +735,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>模板</p>
+          <p>模板<br>
           <!--noindex-->
           
             <div class="post-button">
@@ -922,7 +1038,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>多项式全家桶</p>
+          <p>多项式全家桶<br>
           <!--noindex-->
           
             <div class="post-button">
@@ -1087,7 +1203,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1100,7 +1216,7 @@
             <a href="/categories/">
           
         
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
