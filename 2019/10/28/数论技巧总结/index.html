@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="数论求和技巧在莫比乌斯反演的题目中，我们的目标是将式子转化为 \sum\limits_{d=1}^{n}f(d)g(\lfloor {m\over d}\rfloor,\lfloor {m\over d}\rfloor)的形式。其中，$f$函数是可以通过预处理等方式，在$O(1)$时间内单点求值的前缀和函数；$g$函数可以通过除法分块来将整个求和式划分成$O(\sqrt n)$段，从而使得求和复杂">
+  <meta name="description" content="数论求和技巧在莫比乌斯反演的题目中，我们的目标是将式子转化为 \sum\limits_{d=1}^{n}f(d)g(\lfloor {m\over d}\rfloor,\lfloor {m\over d}\rfloor)的形式。其中，$f$函数是可以通过预处理、杜教筛等方式，在较短时间内单点求值的前缀和函数；$g$函数可以通过除法分块来将整个求和式划分成$O(\sqrt n)$段，从而使得求和复杂">
 <meta name="keywords" content="数论,总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数论技巧总结">
 <meta property="og:url" content="http://shellpicker18.github.io/2019/10/28/数论技巧总结/index.html">
 <meta property="og:site_name" content="shellpicker的博客">
-<meta property="og:description" content="数论求和技巧在莫比乌斯反演的题目中，我们的目标是将式子转化为 \sum\limits_{d=1}^{n}f(d)g(\lfloor {m\over d}\rfloor,\lfloor {m\over d}\rfloor)的形式。其中，$f$函数是可以通过预处理等方式，在$O(1)$时间内单点求值的前缀和函数；$g$函数可以通过除法分块来将整个求和式划分成$O(\sqrt n)$段，从而使得求和复杂">
+<meta property="og:description" content="数论求和技巧在莫比乌斯反演的题目中，我们的目标是将式子转化为 \sum\limits_{d=1}^{n}f(d)g(\lfloor {m\over d}\rfloor,\lfloor {m\over d}\rfloor)的形式。其中，$f$函数是可以通过预处理、杜教筛等方式，在较短时间内单点求值的前缀和函数；$g$函数可以通过除法分块来将整个求和式划分成$O(\sqrt n)$段，从而使得求和复杂">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-28T12:31:38.187Z">
+<meta property="og:updated_time" content="2019-10-29T13:54:48.144Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数论技巧总结">
-<meta name="twitter:description" content="数论求和技巧在莫比乌斯反演的题目中，我们的目标是将式子转化为 \sum\limits_{d=1}^{n}f(d)g(\lfloor {m\over d}\rfloor,\lfloor {m\over d}\rfloor)的形式。其中，$f$函数是可以通过预处理等方式，在$O(1)$时间内单点求值的前缀和函数；$g$函数可以通过除法分块来将整个求和式划分成$O(\sqrt n)$段，从而使得求和复杂">
+<meta name="twitter:description" content="数论求和技巧在莫比乌斯反演的题目中，我们的目标是将式子转化为 \sum\limits_{d=1}^{n}f(d)g(\lfloor {m\over d}\rfloor,\lfloor {m\over d}\rfloor)的形式。其中，$f$函数是可以通过预处理、杜教筛等方式，在较短时间内单点求值的前缀和函数；$g$函数可以通过除法分块来将整个求和式划分成$O(\sqrt n)$段，从而使得求和复杂">
   <link rel="canonical" href="http://shellpicker18.github.io/2019/10/28/数论技巧总结/">
 
 
@@ -298,11 +298,19 @@
                 
               
 
-              <time title="创建时间：2019-10-28 20:05:46 / 修改时间：20:31:38" itemprop="dateCreated datePublished" datetime="2019-10-28T20:05:46+08:00">2019-10-28</time>
+              <time title="创建时间：2019-10-28 20:05:46" itemprop="dateCreated datePublished" datetime="2019-10-28T20:05:46+08:00">2019-10-28</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-29 21:54:48" itemprop="dateModified" datetime="2019-10-29T21:54:48+08:00">2019-10-29</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -343,21 +351,23 @@
 
       
         <h1 id="数论求和技巧"><a href="#数论求和技巧" class="headerlink" title="数论求和技巧"></a>数论求和技巧</h1><p>在莫比乌斯反演的题目中，我们的目标是将式子转化为</p><script type="math/tex; mode=display">
-\sum\limits_{d=1}^{n}f(d)g(\lfloor {m\over d}\rfloor,\lfloor {m\over d}\rfloor)</script><p>的形式。其中，$f$函数是可以通过预处理等方式，在$O(1)$时间内单点求值的前缀和函数；$g$函数可以通过除法分块来将整个求和式划分成$O(\sqrt n)$段，从而使得求和复杂度得到降低。</p><a id="more"></a>
+\sum\limits_{d=1}^{n}f(d)g(\lfloor {m\over d}\rfloor,\lfloor {m\over d}\rfloor)</script><p>的形式。其中，$f$函数是可以通过预处理、杜教筛等方式，在较短时间内单点求值的前缀和函数；$g$函数可以通过除法分块来将整个求和式划分成$O(\sqrt n)$段，从而使得求和复杂度得到降低。</p><a id="more"></a>
 
 <p>下面是一些常用的技巧总结。</p>
 <ol>
-<li><script type="math/tex; mode=display">
-\mu*1=\epsilon</script></li>
-<li><script type="math/tex; mode=display">
+<li>迪利克雷卷积常用公式<script type="math/tex; mode=display">
+\mu*1=\epsilon</script><script type="math/tex; mode=display">
 \varphi*1=Id</script></li>
-<li><script type="math/tex; mode=display">
-\sum\limits_{d=1}^{n}f(d)\sum\limits_{d|i}i
+<li>提取因子，转化成简单求和形式<script type="math/tex; mode=display">
+\sum_{d=1}^{n}f(d)\sum_{d|i}i
 =
-\sum\limits_{d=1}^{n}df(d)\sum\limits_{i=1}^{\lfloor {n\over d}\rfloor}i</script></li>
-<li><script type="math/tex; mode=display">
+\sum_{d=1}^{n}df(d)\sum_{i=1}^{\lfloor {n\over d}\rfloor}i</script></li>
+<li>转化成$\varphi$函数<script type="math/tex; mode=display">
 \sum_{i=1}^{n}[gcd(i, n)=d]=\varphi({n\over d})</script></li>
-<li></li>
+<li>通过换元并交换求和顺序，构造$f$和$g$的迪利克雷卷积<script type="math/tex; mode=display">
+\sum_{i=1}^{n}f(i)\sum_{j=1}^{\lfloor {n\over i}\rfloor}g(j)h({n\over{ij}})=\sum_{t=1}^{n}h({n\over{t}})\sum_{i|t}f(i)g({t\over{i}}),t=ij</script></li>
+<li>杜教筛的构造，其中要保证$f*g$以及$g$可以快速求出<script type="math/tex; mode=display">
+g(1) S(n)=\sum_{i=1}^{n}(g * f)(i)-\sum_{i=2}^{n} g(i) S\left(\frac{n}{i}\right)</script></li>
 </ol>
 
     </div>

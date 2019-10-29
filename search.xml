@@ -4,21 +4,23 @@
     <title>数论技巧总结</title>
     <url>/2019/10/28/%E6%95%B0%E8%AE%BA%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<h1 id="数论求和技巧"><a href="#数论求和技巧" class="headerlink" title="数论求和技巧"></a>数论求和技巧</h1><p>在莫比乌斯反演的题目中，我们的目标是将式子转化为</p><script type="math/tex; mode=display">
-\sum\limits_{d=1}^{n}f(d)g(\lfloor {m\over d}\rfloor,\lfloor {m\over d}\rfloor)</script><p>的形式。其中，$f$函数是可以通过预处理等方式，在$O(1)$时间内单点求值的前缀和函数；$g$函数可以通过除法分块来将整个求和式划分成$O(\sqrt n)$段，从而使得求和复杂度得到降低。</p><a id="more"></a>
+\sum\limits_{d=1}^{n}f(d)g(\lfloor {m\over d}\rfloor,\lfloor {m\over d}\rfloor)</script><p>的形式。其中，$f$函数是可以通过预处理、杜教筛等方式，在较短时间内单点求值的前缀和函数；$g$函数可以通过除法分块来将整个求和式划分成$O(\sqrt n)$段，从而使得求和复杂度得到降低。</p><a id="more"></a>
 
 <p>下面是一些常用的技巧总结。</p>
 <ol>
-<li><script type="math/tex; mode=display">
-\mu*1=\epsilon</script></li>
-<li><script type="math/tex; mode=display">
+<li>迪利克雷卷积常用公式<script type="math/tex; mode=display">
+\mu*1=\epsilon</script><script type="math/tex; mode=display">
 \varphi*1=Id</script></li>
-<li><script type="math/tex; mode=display">
-\sum\limits_{d=1}^{n}f(d)\sum\limits_{d|i}i
+<li>提取因子，转化成简单求和形式<script type="math/tex; mode=display">
+\sum_{d=1}^{n}f(d)\sum_{d|i}i
 =
-\sum\limits_{d=1}^{n}df(d)\sum\limits_{i=1}^{\lfloor {n\over d}\rfloor}i</script></li>
-<li><script type="math/tex; mode=display">
+\sum_{d=1}^{n}df(d)\sum_{i=1}^{\lfloor {n\over d}\rfloor}i</script></li>
+<li>转化成$\varphi$函数<script type="math/tex; mode=display">
 \sum_{i=1}^{n}[gcd(i, n)=d]=\varphi({n\over d})</script></li>
-<li></li>
+<li>通过换元并交换求和顺序，构造$f$和$g$的迪利克雷卷积<script type="math/tex; mode=display">
+\sum_{i=1}^{n}f(i)\sum_{j=1}^{\lfloor {n\over i}\rfloor}g(j)h({n\over{ij}})=\sum_{t=1}^{n}h({n\over{t}})\sum_{i|t}f(i)g({t\over{i}}),t=ij</script></li>
+<li>杜教筛的构造，其中要保证$f*g$以及$g$可以快速求出<script type="math/tex; mode=display">
+g(1) S(n)=\sum_{i=1}^{n}(g * f)(i)-\sum_{i=2}^{n} g(i) S\left(\frac{n}{i}\right)</script></li>
 </ol>
 ]]></content>
       <categories>
@@ -138,8 +140,8 @@ f[x] = \sum\limits_{(x, y)\in \{e\}}f[y] + 1</script><p>+1 表示当前状态表
       </categories>
       <tags>
         <tag>数据结构</tag>
-        <tag>模板</tag>
         <tag>可持久化数据结构</tag>
+        <tag>模板</tag>
         <tag>trie</tag>
       </tags>
   </entry>
@@ -184,9 +186,9 @@ f[x] = \sum\limits_{(x, y)\in \{e\}}f[y] + 1</script><p>+1 表示当前状态表
       </categories>
       <tags>
         <tag>数据结构</tag>
-        <tag>模板</tag>
         <tag>可持久化数据结构</tag>
         <tag>主席树</tag>
+        <tag>模板</tag>
       </tags>
   </entry>
   <entry>
@@ -209,8 +211,8 @@ f[x] = \sum\limits_{(x, y)\in \{e\}}f[y] + 1</script><p>+1 表示当前状态表
       </categories>
       <tags>
         <tag>数据结构</tag>
-        <tag>动态树</tag>
         <tag>模板</tag>
+        <tag>动态树</tag>
       </tags>
   </entry>
   <entry>
