@@ -262,7 +262,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://shellpicker18.github.io/2019/10/28/数论技巧总结/">
+    <link itemprop="mainEntityOfPage" href="http://shellpicker18.github.io/2019/11/01/线段树/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="shellpicker">
@@ -277,7 +277,7 @@
         <h1 class="post-title" itemprop="name headline">
           
             
-            <a href="/2019/10/28/数论技巧总结/" class="post-title-link" itemprop="url">数论技巧总结</a>
+            <a href="/2019/11/01/线段树/" class="post-title-link" itemprop="url">线段树</a>
           
         </h1>
 
@@ -292,19 +292,78 @@
                 
               
 
-              <time title="创建时间：2019-10-28 20:05:46" itemprop="dateCreated datePublished" datetime="2019-10-28T20:05:46+08:00">2019-10-28</time>
+              <time title="创建时间：2019-11-01 17:15:18" itemprop="dateCreated datePublished" datetime="2019-11-01T17:15:18+08:00">2019-11-01</time>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://shellpicker18.github.io/2019/10/29/数论技巧总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="shellpicker">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="shellpicker的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2019/10/29/数论技巧总结/" class="post-title-link" itemprop="url">数论技巧总结</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-29 22:00:00 / 修改时间：21:59:31" itemprop="dateCreated datePublished" datetime="2019-10-29T22:00:00+08:00">2019-10-29</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-29 21:54:48" itemprop="dateModified" datetime="2019-10-29T21:54:48+08:00">2019-10-29</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -341,7 +400,7 @@
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2019/10/28/数论技巧总结/#more" rel="contents">
+              <a class="btn" href="/2019/10/29/数论技巧总结/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -805,7 +864,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-25 11:37:39" itemprop="dateModified" datetime="2019-10-25T11:37:39+08:00">2019-10-25</time>
+                <time title="修改时间：2019-11-01 17:40:28" itemprop="dateModified" datetime="2019-11-01T17:40:28+08:00">2019-11-01</time>
               </span>
             
           
@@ -838,7 +897,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="文本串中本质不同的子串的个数"><a href="#文本串中本质不同的子串的个数" class="headerlink" title="文本串中本质不同的子串的个数"></a>文本串中本质不同的子串的个数</h2><p>后缀自动机是一个有向无环图。</p><p>串 $s$ 是串 $t$ 的子串，当且仅当 $t$ 的后缀自动机上存在 $s$ 对应的状态。</p><p>因此，$t$ 的后缀自动机上不同的路径数就是本质不同的子串的数量。</p><p>考虑 $dp$，令 $f[i]$ 表示从状态 $i$ 出发，共有多少种本质不同的子串，转移如下：</p>
+          <h2 id="文本串中本质不同的子串的个数"><a href="#文本串中本质不同的子串的个数" class="headerlink" title="文本串中本质不同的子串的个数"></a>文本串中本质不同的子串的个数</h2><p>后缀自动机是一个有向无环图。</p><p>串$s$是串$t$的子串，当且仅当$t$的后缀自动机上存在 $s$ 对应的状态。</p><p>因此，$t$的后缀自动机上不同的路径数就是本质不同的子串的数量。</p><p>考虑$dp$，令$f[i]$表示从状态$i$出发，共有多少种不同的路径，转移如下：</p><script type="math/tex; mode=display">
+f[x] = \sum_{(x, y)\in \{e\}}f[y] + 1</script>
           <!--noindex-->
           
             <div class="post-button">
@@ -910,7 +970,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-25 11:37:36" itemprop="dateModified" datetime="2019-10-25T11:37:36+08:00">2019-10-25</time>
+                <time title="修改时间：2019-11-01 17:42:17" itemprop="dateModified" datetime="2019-11-01T17:42:17+08:00">2019-11-01</time>
               </span>
             
           
@@ -1180,111 +1240,6 @@
   
 
     
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://shellpicker18.github.io/2019/10/12/高斯消元/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="shellpicker">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="shellpicker的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2019/10/12/高斯消元/" class="post-title-link" itemprop="url">高斯消元</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-12 21:21:13" itemprop="dateCreated datePublished" datetime="2019-10-12T21:21:13+08:00">2019-10-12</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-25 11:37:27" itemprop="dateModified" datetime="2019-10-25T11:37:27+08:00">2019-10-25</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/模板/" itemprop="url" rel="index">
-                    <span itemprop="name">模板</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>模板<br>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/2019/10/12/高斯消元/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </article>
-  
-  
-  
-
-    
   </div>
 
   
@@ -1337,7 +1292,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
