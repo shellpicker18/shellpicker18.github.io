@@ -31,6 +31,7 @@ g(S)=\sum_{S\subset S'}f(S')</script><p>，则根据子集反演公式有</p>
 f(S)=\sum_{S\subset S'}(-1)^{|S'|-|S|}g(S')</script><p>因此，现在的问题转化为如何快速求出$g$。</p>
 <p>令$h(S)$为包含$S$的集合的个数，则$g(S)=2^{h(S)}-1$。</p>
 <p>可以发现，求$h$的过程即为$SOS\ DP$的过程，即：每个集合的状态都是从<strong>包含这个集合的集合</strong>对应的状态转移过来。</p>
+<p><a href="https://codeforces.com/contest/449/submission/64468057" target="_blank" rel="noopener">代码</a></p>
 ]]></content>
       <categories>
         <category>总结</category>
@@ -226,8 +227,8 @@ f[x] = \sum_{(x, y)\in \{e\}}f[y] + |right(x)|</script><p>注意，一个节点�
         <category>模板</category>
       </categories>
       <tags>
-        <tag>数据结构</tag>
         <tag>模板</tag>
+        <tag>数据结构</tag>
         <tag>可持久化数据结构</tag>
         <tag>trie</tag>
       </tags>
@@ -272,8 +273,8 @@ f[x] = \sum_{(x, y)\in \{e\}}f[y] + |right(x)|</script><p>注意，一个节点�
         <category>模板</category>
       </categories>
       <tags>
-        <tag>数据结构</tag>
         <tag>模板</tag>
+        <tag>数据结构</tag>
         <tag>可持久化数据结构</tag>
         <tag>主席树</tag>
       </tags>
@@ -297,9 +298,9 @@ f[x] = \sum_{(x, y)\in \{e\}}f[y] + |right(x)|</script><p>注意，一个节点�
         <category>模板</category>
       </categories>
       <tags>
+        <tag>模板</tag>
         <tag>数据结构</tag>
         <tag>动态树</tag>
-        <tag>模板</tag>
       </tags>
   </entry>
   <entry>

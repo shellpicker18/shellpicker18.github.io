@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="shellpicker的博客">
 <meta property="og:description" content="简介$SOS(Sum\ over\ subset)DP$是一类经典的集合$dp$模型，常用于求解形如 f[S]=\sum_{S&apos;\subset S}f[S&apos;] f[S]=\sum_{S\subset S&apos;}f[S&apos;]的$dp$问题。其中$\sum$为任意操作符号，并不仅仅指代求和符号。原理例子定义一个序列$a$的子集前缀和序列$b$为：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-07T15:03:00.327Z">
+<meta property="og:updated_time" content="2019-11-07T15:05:49.199Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SOS-DP">
 <meta name="twitter:description" content="简介$SOS(Sum\ over\ subset)DP$是一类经典的集合$dp$模型，常用于求解形如 f[S]=\sum_{S&apos;\subset S}f[S&apos;] f[S]=\sum_{S\subset S&apos;}f[S&apos;]的$dp$问题。其中$\sum$为任意操作符号，并不仅仅指代求和符号。原理例子定义一个序列$a$的子集前缀和序列$b$为：">
@@ -309,7 +309,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-07 23:03:00" itemprop="dateModified" datetime="2019-11-07T23:03:00+08:00">2019-11-07</time>
+                <time title="修改时间：2019-11-07 23:05:49" itemprop="dateModified" datetime="2019-11-07T23:05:49+08:00">2019-11-07</time>
               </span>
             
           
@@ -378,6 +378,7 @@ g(S)=\sum_{S\subset S'}f(S')</script><p>，则根据子集反演公式有</p>
 f(S)=\sum_{S\subset S'}(-1)^{|S'|-|S|}g(S')</script><p>因此，现在的问题转化为如何快速求出$g$。</p>
 <p>令$h(S)$为包含$S$的集合的个数，则$g(S)=2^{h(S)}-1$。</p>
 <p>可以发现，求$h$的过程即为$SOS\ DP$的过程，即：每个集合的状态都是从<strong>包含这个集合的集合</strong>对应的状态转移过来。</p>
+<p><a href="https://codeforces.com/contest/449/submission/64468057" target="_blank" rel="noopener">代码</a></p>
 
     </div>
 
